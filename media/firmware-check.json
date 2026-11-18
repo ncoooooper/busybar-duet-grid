@@ -14,5 +14,28 @@
   "frames": 54,
   "distinct_frames": 26,
   "exit": "App io.ncoooooper.duetgrid exited: finished; heap peak 80.8 of 128 KiB",
-  "sha256": "f2463364dbfe7663b80d8866523e991336d7fb1ca4dc8a3e9a1ae2ea3122d391"
+  "sha256": "0a4942b35e1c539a9658c126991b772df969f0a41a229bb345d1fdc138c5dc31",
+  "display_test": {
+    "firmware": "1.3.1",
+    "input": "On-device controls",
+    "keys": [
+      [
+        "ok",
+        "ok",
+        "ok",
+        "start"
+      ],
+      [
+        "ok",
+        "ok",
+        "ok"
+      ]
+    ],
+    "frames": 160,
+    "distinct_by_flow": [
+      22,
+      15
+    ],
+    "exit": "App io.btype.duetgrid exited: finished; heap peak 86.0 of 128 KiB"
+  }
 }
