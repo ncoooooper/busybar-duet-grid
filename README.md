@@ -4,6 +4,8 @@ Trade short rhythms between two players, then reproduce the full pulse sequence 
 
 Hand the same instrument across the desk for a rhythm game. The second player must remember the spaces between taps, so getting the number of beats right is only half the challenge.
 
+During composition, each column records a gap between two taps. When the bar changes hands, the second player sees empty positions fill with their own rhythm. A missed interval turns red.
+
 ## Compose a short call
 
 1. Hold **Start** for a fresh round. Player one clicks the wheel at least three times. Use an easy-to-remember phrase such as two short beats followed by a longer gap.

@@ -1,8 +1,22 @@
+import {rect, type Frame} from "@shared/surface";
 import {desk} from "@shared/desk";
+
+function rhythm(s: S): Frame {
+  const copying = s.phase==="Echo" || s.phase==="Miss" || s.phase==="Passed";
+  const played = copying?s.answer:s.pattern;
+  const total = copying?s.pattern.length:played.length;
+  const longest = Math.max(1,...played);
+  return Array.from({length:total},(_,i)=>{
+    const h = i>=played.length?1:Math.max(2,Math.round(10*played[i]/longest));
+    const color = i>=played.length?"#39414BFF":s.phase==="Miss" && i===played.length-1?"#F28879FF":"#BD9AEFFF";
+    return rect("tap"+i,49+i*2,15-h,1,h,color);
+  });
+}
+
 
 type S={phase:string;pattern:number[];answer:number[];last:number;notice:string};
 const init=():S=>({phase:"Compose",pattern:[],answer:[],last:0,notice:"Tap at least 3 beats"});
-desk<S>({name:"Duet Grid",accent:"#B695F0",motion:{"motif":"interval","color":"#B695F0","shine":"#F8E8FF"},initial:init,render:s=>({title:s.phase,value:s.phase==="Echo"?s.answer.length+"/"+s.pattern.length:s.phase==="Passed"?"Matched":s.phase==="Miss"?"Try again":(s.pattern.length+Number(!!s.last))+" beats",
+desk<S>({name:"Duet Grid",accent:"#B695F0",motion:{enabled:false},initial:init,render:s=>({marks:rhythm(s),title:s.phase,value:s.phase==="Echo"?s.answer.length+"/"+s.pattern.length:s.phase==="Passed"?"Matched":s.phase==="Miss"?"Try again":(s.pattern.length+Number(!!s.last))+" beats",
  lines:[s.notice,"Target: "+(s.pattern.length+1)+" taps","Tolerance 25% / 120ms","Click: tap pulse","Start: pass or replay","Hold Start: new round"]}),
  action:(s,k,now)=>{if(k==="hold-start"){Object.assign(s,init());return;}
  if(k==="start"){if(s.phase==="Compose"&&s.pattern.length<2){s.notice="Need at least 3 taps";return;}
