@@ -1,7 +1,7 @@
 {
   "name": "busybar-duet-grid",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Trade short rhythms between two players, then reproduce the full pulse sequence by tapping.",
   "author": "ncoooooper",
   "type": "module",

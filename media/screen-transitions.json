@@ -1,0 +1,57 @@
+{
+  "app": "busybar-duet-grid",
+  "sha256": "350254b9f34d5c099d0b81c9e3314120d6fd6ead8cd51c57acbb31f8664a9e9e",
+  "rapid_input_test": {
+    "app": "io.ncoooooper.duetgrid",
+    "sha256": "350254b9f34d5c099d0b81c9e3314120d6fd6ead8cd51c57acbb31f8664a9e9e",
+    "firmware": {
+      "name": "1.3.1",
+      "commit": "8edd2da4"
+    },
+    "heap_peak_kib": 91.2,
+    "budget_kib": 128.0,
+    "exit": "finished"
+  },
+  "firmware": "1.3.1",
+  "cell": 16,
+  "lit": 14,
+  "front": [
+    72,
+    16
+  ],
+  "rear": [
+    160,
+    80
+  ],
+  "captures": [
+    {
+      "mode": "classic",
+      "guides": [
+        "compose-and-pass",
+        "echo-and-match"
+      ],
+      "tour": "screen-transitions",
+      "input": [
+        [
+          "ok",
+          "ok",
+          "ok",
+          "start"
+        ],
+        [
+          "ok",
+          "ok",
+          "ok"
+        ]
+      ],
+      "distinct_frames": [
+        25,
+        12,
+        36
+      ],
+      "rear_frames": 31,
+      "rear_tour": "screen-transitions-rear",
+      "exit": "finished"
+    }
+  ]
+}

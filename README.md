@@ -6,6 +6,20 @@ Hand the same instrument across the desk for a rhythm game. The second player mu
 
 During composition, each column records a gap between two taps. When the bar changes hands, the second player sees empty positions fill with their own rhythm. A missed interval turns red.
 
+## Screen transitions
+
+Place notes in the call and follow the answer during playback.
+
+![Duet Grid front display. Place notes in the call and follow the answer during playback.](media/guide/screen-transitions.gif)
+
+<details>
+
+<summary>Watch the rear display</summary>
+
+![Duet Grid rear display during the recorded controls](media/guide/screen-transitions-rear.gif)
+
+</details>
+
 ## Compose a short call
 
 1. Hold **Start** for a fresh round. Player one clicks the wheel at least three times. Use an easy-to-remember phrase such as two short beats followed by a longer gap.
@@ -36,6 +50,6 @@ Open BUSY Bar Emulator. From this repository, run:
 
 Press **Back** to exit.
 
-The GIFs are excerpts from the emulator recording. Each front-display pixel is shown at 9× its original width and height. The end frames pause for reading.
+The GIFs are excerpts from the emulator recording. Each LED occupies a 16 × 16 cell with a black border. The end frames pause for reading.
 
 [Full recording](media/controls.mp4) · [Rear display](screenshots/back-1.png) · [Firmware test](EMULATOR-QA.md) · [MIT license](LICENSE)
